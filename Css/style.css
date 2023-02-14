@@ -5,7 +5,7 @@
     --secondary-text-color: #191919;
     --secondary-color: #868686;
     --tertiary-color: #eff3f4;
-    --secondary-bg-color:#5c1011;
+    --secondary-bg-color: #5c1011;
 
 }
 
@@ -414,11 +414,11 @@ i {
     flex: 1 1 0;
 }
 
-#contact-information .section-subtitle{
+#contact-information .section-subtitle {
     color: var(--primary-text-color);
 }
 
-#contact-information i{
+#contact-information i {
     position: absolute;
     top: 0;
     left: 0;
@@ -426,41 +426,41 @@ i {
     color: var(--main-color);
 }
 
-#contact-information form{
+#contact-information form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 
 }
 
-#contact-information .form-control{
+#contact-information .form-control {
     display: flex;
     gap: 1rem;
 }
 
 #contact-information input,
-#contact-information textarea{
+#contact-information textarea {
     flex: 0.5;
     padding: 1rem;
     border: none;
 }
 
-#contact-information .btn{
+#contact-information .btn {
     align-self: start;
     border: 2px solid var(--primary-text-color);
     font-size: 1.2rem;
     transition: 0.4s;
 }
 
-#contact-information .btn:hover{
+#contact-information .btn:hover {
     background-color: var(--primary-text-color);
     color: var(--main-color);
-    
+
 }
 
 /*Rodapé*/
 
-#footer{
+#footer {
     color: var(--primary-text-color);
     background-color: var(--secondary-bg-color);
     display: flex;
@@ -468,27 +468,27 @@ i {
     padding: 3rem 3rem 5rem;
 }
 
-#footer i{
+#footer i {
     font-size: 1rem;
     padding: 0.3rem;
 
 }
 
-#footer a{
+#footer a {
     color: var(--primary-text-color);
 }
 
 
 .contact-info,
-.links-container{
+.links-container {
     width: 20%;
 }
 
-.footer-brand{
+.footer-brand {
     margin-bottom: 2rem;
 }
 
-.footer-brand h2{
+.footer-brand h2 {
     background-color: var(--main-color);
     margin-bottom: 0.5rem;
     padding: 1rem;
@@ -500,7 +500,7 @@ i {
 }
 
 .contact-info p i {
-    background-color:transparent;
+    background-color: transparent;
     padding: 0;
     color: var(--main-color);
 }
@@ -508,10 +508,10 @@ i {
 
 .social-networks p {
     margin-bottom: 1rem;
-    
+
 }
 
-.networks{
+.networks {
     margin-top: 2rem;
     display: flex;
     gap: 1rem;
@@ -549,4 +549,195 @@ i {
 
 .phone-info {
     color: var(--secondary-color);
+}
+
+/*Mobile-navbar*/
+#menu,
+#close-menu {
+    font-size: 2rem;
+    padding: 1rem;
+    display: none;
+
+}
+
+#close-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#mobile-navbar {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    transform: 0.4s;
+    z-index: 5;
+}
+
+
+#mobile-navbar.menu-active {
+    left: 0;
+}
+
+#mobile-navbar a {
+    color: var(--primary-text-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--main-color);
+}
+
+
+
+/*Responsividade*/
+
+@media (max-width: 450px) {
+
+    /*Geral*/
+    body {
+        overflow-x: hidden;
+    }
+
+    i {
+        padding: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    /*Navbar*/
+
+    #navbar {
+        display: none;
+    }
+
+    #menu,
+    #close-menu {
+        display: block;
+    }
+
+    .banner {
+        max-width: 100%;
+        padding: 4rem 2re;
+    }
+
+    .banner h2 {
+        font-size: 3rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+
+    }
+
+    /*Areas de atuação*/
+    .btn {
+        align-self: initial;
+    }
+
+    .image-container {
+        flex: 1 1 100%;
+    }
+
+    #other-service {
+        flex-wrap: wrap;
+    }
+
+    /*Sobre nós*/
+    #about {
+        gap: 0;
+    }
+
+    #about-text,
+    #about-data {
+        flex: 1 1 100%;
+    }
+
+    .about-descripition {
+        gap: 1rem;
+    }
+
+    .about-description i {
+        padding: 0;
+        min-width: 40px;
+    }
+
+    #about #about-data .data {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid var(--secondary-text-color);
+    }
+
+    /* Depoimentos*/
+    .text-container {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    /*Colaboradores*/
+    #team {
+        margin-top: 2rem;
+    }
+
+    #team h2 {
+        font-size: 2.5rem;
+    }
+
+    .employees {
+        flex-wrap: wrap;
+    }
+
+    /*Contato*/
+    #contact {
+        padding-bottom: 0;
+    }
+
+    #contact-information {
+        padding: 7rem 1rem;
+    }
+
+    #contact-information .form-control {
+        flex-direction: column;
+    }
+
+    #contact-information .btn {
+        align-self: auto;
+    }
+
+    /*Rodapé*/
+
+    #footer {
+        flex-wrap: wrap;
+    }
+
+    #footer i {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .networks {
+        margin-bottom: 3rem;
+    }
+
+    .links-container {
+        margin-bottom: 1rem;
+    }
+
+    .links-container h4 {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-info,
+    .links-container {
+        width: 100%;
+    }
 }
